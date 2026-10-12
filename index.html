@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Co robiszzzzzzzzzzzzzzzzzzzzzzzzzzz?</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #111;
+    background: #fff;
+    max-width: 480px;
+    margin: 20vh auto 0;
+    padding: 0 20px;
+  }
+  h1 { font-size: 28px; font-weight: normal; margin: 0 0 16px; }
+  textarea {
+    width: 100%;
+    font: inherit;
+    border: 1px solid #111;
+    border-radius: 0;
+    padding: 8px;
+    margin-bottom: 12px;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  button {
+    font: inherit;
+    background: #111;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  hr { border: 0; border-top: 1px solid #ccc; margin: 40px 0 24px; }
+  #zart { margin: 0 0 12px; min-height: 1.5em; }
+  .link {
+    background: none;
+    color: #111;
+    padding: 0;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <h1>Co robiszzzzzzzzzzzzzzzzzzzzzzzzzzz?</h1>
+
+  <form action="https://formsubmit.co/azik177427@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <textarea name="wiadomosc" rows="4" required></textarea>
+    <button type="submit">Wyślij</button>
+  </form>
+
+  <hr>
+
+  <p id="zart"></p>
+  <button class="link" id="losuj" type="button">Wylosuj żart na dziś</button>
+
+<script>
+  var zarty = [
+    "Dlaczego komputer poszedł do lekarza? Bo złapał wirusa.",
+    "Co mówi jeden bit do drugiego? Trzymaj się, zaraz będzie bajt.",
+    "Dlaczego informatyk nie lubi natury? Za dużo bugów.",
+    "Co robi programista na wakacjach? Wraca do domu, bo tam jest Wi-Fi.",
+    "Dlaczego pomidor się zaczerwienił? Bo zobaczył, jak sałatka się ubiera.",
+    "Jak nazywa się kot, który lubi matematykę? Pi-kot."
+  ];
+  document.getElementById("losuj").onclick = function () {
+    document.getElementById("zart").textContent =
+      zarty[Math.floor(Math.random() * zarty.length)];
+  };
+</script>
+</body>
+</html>
